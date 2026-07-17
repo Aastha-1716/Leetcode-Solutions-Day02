@@ -1,105 +1,92 @@
-# Leetcode-Solutions-Day02
+# LeetCode Solutions - Day 02
 
-Problems Included
-1. Merge Sorted Array
-Description
+This repository contains Java solutions to popular LeetCode problems with their problem descriptions, approaches, time complexity, space complexity, and examples.
 
-Merge two sorted arrays into a single sorted array by copying the elements of the second array into the first array and sorting the combined array.
+---
 
-Algorithm
-Copy all elements of nums2 into the empty positions of nums1.
-Sort the entire nums1 array.
-Return the merged sorted array.
+## 📘 Problems Solved
 
-Time Complexity: O((m + n) log(m + n))
+| # | LeetCode | Problem | Topic | Approach | Time Complexity | Space Complexity |
+|---|----------|---------|--------|----------|-----------------|------------------|
+| 1 | 88 | Merge Sorted Array | Arrays | Copy and Sort | O((m+n) log(m+n)) | O(1) |
+| 2 | 121 | Best Time to Buy and Sell Stock | Arrays | Minimum Price Tracking | O(n) | O(1) |
+| 3 | 53 | Maximum Subarray | Arrays | Kadane's Algorithm | O(n) | O(1) |
+| 4 | 704 | Binary Search | Binary Search | Binary Search | O(log n) | O(1) |
+| 5 | 169 | Majority Element | Arrays | Boyer-Moore Voting Algorithm | O(n) | O(1) |
+| 6 | 242 | Valid Anagram | Strings | Sorting | O(n log n) | O(n) |
 
-Space Complexity: O(1) (excluding the sorting algorithm's internal space)
+---
 
-2. Best Time to Buy and Sell Stock
-Description
+## 📌 Problem Descriptions
 
-Find the maximum profit by buying a stock once and selling it once. Keep track of the minimum stock price seen so far and calculate the maximum profit during traversal.
+### 🔹 LeetCode 88 – Merge Sorted Array
 
-Algorithm
-Initialize the minimum price with the first element.
-Traverse the array.
-Update the minimum price whenever a smaller value is found.
-Calculate the current profit.
-Update the maximum profit if the current profit is greater.
-Return the maximum profit.
+Merge two sorted arrays into one sorted array.
 
-Time Complexity: O(n)
+**Approach**
+- Copy all elements of `nums2` into `nums1`.
+- Sort the combined array.
+- Return the merged array.
 
-Space Complexity: O(1)
+---
 
-3. Maximum Subarray
-Description
+### 🔹 LeetCode 121 – Best Time to Buy and Sell Stock
 
-Find the contiguous subarray with the largest sum using Kadane's Algorithm.
+Find the maximum profit by buying and selling one stock.
 
-Algorithm
-Initialize sum = 0 and maxSum = nums[0].
-Traverse the array.
-If the current sum is positive, add the current element.
-Otherwise, start a new subarray from the current element.
-Update the maximum sum whenever a larger sum is found.
-Return the maximum sum.
+**Approach**
+- Track the minimum price.
+- Calculate profit at each step.
+- Update the maximum profit.
 
-Time Complexity: O(n)
+---
 
-Space Complexity: O(1)
+### 🔹 LeetCode 53 – Maximum Subarray
 
-4. Binary Search
-Description
+Find the contiguous subarray with the largest sum.
 
-Search for a target value in a sorted array using the Binary Search algorithm.
+**Approach**
+- Use Kadane's Algorithm.
+- Extend the current subarray if beneficial.
+- Update the maximum sum.
 
-Algorithm
-Initialize left and right.
-Find the middle index.
-If the middle element is the target, return its index.
-If the target is greater, search the right half.
-Otherwise, search the left half.
-Return -1 if the target is not found.
+---
 
-Time Complexity: O(log n)
+### 🔹 LeetCode 704 – Binary Search
 
-Space Complexity: O(1)
+Search for a target element in a sorted array.
 
-5. Majority Element
-Description
+**Approach**
+- Find the middle element.
+- Search the appropriate half.
+- Repeat until found or exhausted.
 
-Find the element that appears more than ⌊n/2⌋ times using the Boyer-Moore Voting Algorithm.
+---
 
-Algorithm
-Initialize candidate and count.
-Traverse the array.
-If count becomes zero, choose the current element as the new candidate.
-Increase the count if the current element matches the candidate.
-Otherwise, decrease the count.
-Return the candidate.
+### 🔹 LeetCode 169 – Majority Element
 
-Time Complexity: O(n)
+Find the element appearing more than ⌊n/2⌋ times.
 
-Space Complexity: O(1)
+**Approach**
+- Use Boyer-Moore Voting Algorithm.
+- Maintain a candidate and count.
+- Return the final candidate.
 
-6. Valid Anagram
-Description
+---
 
-Determine whether two strings are anagrams by sorting their characters and comparing the sorted arrays.
+### 🔹 LeetCode 242 – Valid Anagram
 
-Algorithm
-Check whether both strings have the same length.
-Convert both strings into character arrays.
-Sort both arrays.
-Compare the sorted arrays.
-Return true if they are equal; otherwise, return false.
+Determine whether two strings are anagrams.
 
-Time Complexity: O(n log n)
+**Approach**
+- Compare lengths.
+- Sort both character arrays.
+- Compare the sorted arrays.
 
-Space Complexity: O(n)
+---
 
-Technologies Used
-Java
-VS Code
-LeetCode
+## 💻 Technologies Used
+
+- Java
+- VS Code
+- LeetCode
